@@ -8,6 +8,9 @@ import Seo from "../components/seo"
 type DataProps = {
   site: {
     buildTime: string
+    siteMetadata: {
+      author: {name: string}
+    }
   }
 }
 
@@ -16,7 +19,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
   path,
   location,
 }) => (
-  <Layout title="Using TypeScript" location={location}>
+  <Layout title="Using TypeScript" location={location} author={data.site.siteMetadata.author}>
     <h1>Gatsby supports TypeScript by default!</h1>
     <p>
       This means that you can create and write <code>.ts/.tsx</code> files for
@@ -50,6 +53,9 @@ export const query = graphql`
   {
     site {
       buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+      siteMetadata {
+        author {name}
+      }
     }
   }
 `

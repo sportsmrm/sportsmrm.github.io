@@ -9,16 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Sports Member Relationship Manager Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Alex Miller`,
+      summary: `an experienced developer, who lives and works in Hampshire, United Kingdom.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    description: `A GitHub Pages site describing the Sport Member Relationship Manager, Alex Miller's portfolio project.`,
+    siteUrl: `https://sportsmrm.github.io/`
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -102,7 +99,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Sports MRM Blog RSS Feed",
           },
         ],
       },
@@ -110,8 +107,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `Sports MRM Website`,
+        short_name: `SPortsMRM`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website

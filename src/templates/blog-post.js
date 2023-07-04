@@ -10,9 +10,10 @@ const BlogPostTemplate = ({
   location,
 }) => {
   const siteTitle = site.siteMetadata?.title || `Title`
+  const author = site.siteMetadata?.author;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} author={author}>
       <article
         className="blog-post"
         itemScope
@@ -81,6 +82,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        author {name}
       }
     }
     markdownRemark(id: { eq: $id }) {
